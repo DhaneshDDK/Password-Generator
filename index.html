@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password-Generator</title>
+    <link rel="shortcut icon" href="./images/logo-removebg-preview.png">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/f776c58278.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="w-[100vw] h-[100vh] bg-gradient-to-r from-[#000428] to-[#004e92] text-white flex items-center justify-center">
+
+        <div class="flex flex-col gap-4 bigbox">
+            <!--1-->
+            <div class="text-[25px] font-bold self-center">PASSWORD GENERATOR</div>
+            <!--2-->
+            <div class="relative flex justify-between items-center p-3 bg-[#41295b] w-[25em] rounded-lg border-[#ffffff30] border-[2px] border-solid
+             backdrop-opacity-60 box">
+               <input type="text" readonly placeholder="PASSWORD" class="password bg-[#41295b] text-[18px] text-[#fff933] outline-none">
+                <i class="copied fa-regular fa-copy cursor-pointer"></i>
+                <div class="copiedText absolute -right-4 -top-5  py-1 px-3 bg-[purple] rounded-full text-[#fff933] transition-all duration-200 ease-in-out">Copied</div>
+            </div> 
+            <!--3-->
+            <div class="p-5 pt-3 bg-[#41295a] w-[25em] flex flex-col gap-3 box rounded-lg">
+                <div class="flex justify-between items-center">
+                    <div class="text-[16px] font-thin ">Password Length</div>
+                    <div class="text-[16px] text-[#fff933] font-bold number">10</div>
+                </div>
+                 <div class=""><input type="range" min="0" max="20" value="10" class="range blue w-[100%]"/></div>
+                <div class="font-sans text-[17px] flex flex-col gap-3 py-2 check">
+                 <div class="flex gap-4 items-center">
+                    <input id="checkbox1" type="checkbox" name="box1" class="cursor-pointer scale-150"> <label for="box1">Include Uppercase Letters</label>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <input id="checkbox2" type="checkbox" name="box1" class="cursor-pointer scale-150" > <label for="box1">Include Lowercase Letters</label>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <input id="checkbox3" type="checkbox" name="box1" class="cursor-pointer scale-150"> <label for="box1">Include Numbers</label>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <input id="checkbox4" type="checkbox" name="box1" class="cursor-pointer scale-150"> <label for="box1">Include Symbols</label>
+                </div>
+            </div>
+                <div class="flex justify-between items-center">
+                    <div class="text-[15px] font-medium tracking-wide">Strength</div>
+                    <i id="indicator" class="fa-regular fa-circle rounded-full"></i>
+                </div>
+                <button class="button generate border-solid border-[2px] p-2 rounded-lg hover:scale-105 transition-all duration-200 ease-in-out 
+                ring-1 ring-pink-300 btn text-[18px] font-serif bg-gradient-to-r from-[#2980b9] to-[#2c3e50] my-2 ">GENERATE PASSWORD</button>
+            </div>
+        </div>
+
+    </div>
+   <script src="./index.js"></script>
+</body>
+</html>

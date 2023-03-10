@@ -1,0 +1,144 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+:root{
+   --vb-cyan : hsl(176,100%,44%);
+   --vb-cyan2 : hsl(177,92%,70%);
+   --dk-text : hsl(198,20%,13%);
+}
+.copiedText{
+   scale: 0;
+}
+.active{
+   scale:1;
+}
+
+.range {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background: rgba(59,173,227,1);
+    background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
+    background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 );
+    height: 4px;
+  }
+  
+  input[type=range]:focus {
+    outline: none ;
+
+  }
+  input[type=range]::-webkit-slider-thumb:hover {
+   box-shadow: 0px 0px 20px 2px rgba(255,22961,0.8);
+  }
+  
+  input[type=range]::-moz-range-track {
+    -moz-appearance: none;
+    background: rgba(59,173,227,1);
+    background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
+    background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 );
+    height: 2px;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    max-width: 80px;
+    position: relative;
+    bottom: 11px;
+    background-color: #1d1c25;
+    cursor: -webkit-grab;
+  
+    -webkit-transition: border 1000ms ease;
+    transition: border 1000ms ease;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    -moz-appearance: none;
+    border: 2px solid;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    max-width: 80px;
+    position: relative;
+    bottom: 11px;
+    background-color: #1d1c25;
+    cursor: -moz-grab;
+    -moz-transition: border 1000ms ease;
+    transition: border 1000ms ease;
+  }
+  
+  
+  
+  .range.blue::-webkit-slider-thumb {
+     border-color: rgb(59,173,227);
+  }
+  
+  .range.ltpurple::-webkit-slider-thumb {
+     border-color: rgb(87,111,230);
+  }
+  
+  .range.purple::-webkit-slider-thumb {
+     border-color: rgb(152,68,183);
+  }
+  
+  .range.pink::-webkit-slider-thumb {
+     border-color: rgb(255,53,127);
+  }
+
+ #indicator{
+   background-color : gray;
+   color: gray;
+ }
+
+
+.check input{
+   appearance: none;
+   width: 18px;
+   height: 18px;
+   border: 1px solid var(--vb-cyan);
+   cursor: pointer;
+   position: relative;
+   border-radius: 0.35rem;
+}
+
+.check input:checked{
+   background-color: var(--vb-cyan);
+}
+.check input:checked::before{
+   content: '✔';
+   color: var(--dk-text);
+   position: absolute;
+   font-size: 0.8rem;
+   font-weight: 600;
+   top: -5%;
+}
+
+  @media (max-width:450px) {
+     .bigbox{
+        width: 80%;
+        position: relative;
+        /* top: -10%; */
+     }
+     .box{
+        width: 100%;
+     }
+  }
+
